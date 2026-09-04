@@ -1,2 +1,95 @@
-h1{color: red;}
-/*Holaaa, esto es un comentari*/
+*{margin: 0;
+box-sizing:border-box;
+}
+
+
+body {
+margin:0;
+color:#f4f0ff;
+background-color:#5A0F1E;
+}
+
+h1 {
+   margin-bottom: 10px;
+}
+
+header {
+    background-color:#A8202B;
+    width:100%;
+    margin-bottom:10px;
+    height: 20vh;
+    padding: 10px;
+    color: white;
+}
+
+h2 {
+    color: #A8202B;
+}   
+
+h1, h3 {
+  color: #242123
+}   
+
+main {
+    width: 90%;
+    margin: 0 auto;
+   }
+
+    section {
+color:#F5F4F3;
+width: 90%;
+background-color:#242123; 
+}
+
+section {
+    p {
+        margin: 15px;
+        padding: 15px
+    }
+}
+
+div {
+   padding: 10px;
+background-color:#A8202B;
+width: 90%;
+margin: 0 auto
+}
+
+.activities h2 ~ ul{
+    color: orange;
+}
+
+.information h3 ~ p {
+    color: orange;
+}
+
+#location h2 + p {
+color: orange; 
+}
+
+iframe { 
+    padding: 10px;
+    width: 100%;
+    height: 380px;
+}
+
+#location {
+    h2 {
+        color: black;
+    }
+    margin-bottom: 10px;
+    background-color: #A8202B;
+    padding: 10px;
+    width: 90%;
+    height: 600px;
+}
+
+
+section:has(iframe){
+
+ height: 600px;
+    background-color: black;
+
+}
+
+
