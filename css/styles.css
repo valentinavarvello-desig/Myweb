@@ -46,14 +46,6 @@ h2 {
     border-radius: 8px;
 }
 
-.photo-credit {
-    font-size: 0.875rem;
-}
-
-.photo-credit a {
-    color: var(--archive-light);
-}
-
 .btn-danger {
     background-color: var(--archive-dark);
     border-color: var(--archive-light);
