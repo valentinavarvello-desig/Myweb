@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,slnt,wdth,wght,ROND@1..144,-10..0,25..151,1..1000,0..100&family=Limelight&display=swap');
+
+:root {
+    --archive-red: #5a0f1e;
+    --panel-red: #a8202b;
+    --archive-dark: #242123;
+    --archive-light: #fff;
+}
+
+body {
+    background-color: var(--archive-red);
+    color: var(--archive-light);
+    font-family: "Google Sans Flex", sans-serif;
+}
+
+header,
+.intro,
+.section {
+    background-color: var(--panel-red);
+}
+
+h1,
+h2 {
+    font-family: "Limelight", sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+.card {
+    background-color: var(--panel-red);
+    color: var(--archive-light);
+    border-radius: 10px;
+}
+
+.intro,
+.section {
+    border-radius: 10px;
+}
+
+.intro img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.btn-danger {
+    background-color: var(--archive-dark);
+    border-color: var(--archive-light);
+    color: var(--archive-light);
+    transition: color 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: var(--archive-dark);
+    border-color: var(--archive-light);
+    color: #ff5252;
+}
+
+.dark {
+    background-color: var(--archive-dark);
+}

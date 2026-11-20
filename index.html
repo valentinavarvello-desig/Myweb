@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Classic Cars Collection</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-danger">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Cars Archive</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main-menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#collection">Collection</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#autoclasica">AutoClásica</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="py-5 mb-5 text-center">
+        <div class="container py-4">
+            <h1 class="mb-3">Classic Cars Collection</h1>
+            <p class="lead mb-4">Explore a collection of iconic classic cars.</p>
+            <a class="btn btn-danger" href="#collection">Explore the collection</a>
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#vote-modal">Vote for your favorite car</button>
+        </div>
+    </header>
+
+    <main class="container pb-5">
+        <section id="collection" class="mb-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2>Car Collection</h2>
+                    <p>Discover the year and country of origin of each car.</p>
+                    <button id="load-cars" type="button" class="btn btn-danger mb-4">Load Cars</button>
+                    <button id="change-theme" type="button" class="btn btn-danger mb-4">Change to dark mode</button>
+                </div>
+            </div>
+            <div id="car-list" class="row g-4"></div>
+        </section>
+
+        <section id="about" class="intro border border-secondary p-4 mb-5">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                    <img src="img/mustang-rojo.jpg" class="img-fluid" alt="Red classic Ford Mustang">
+                </div>
+                <div class="col-lg-6 d-flex flex-column">
+                    <h2>About the Collection</h2>
+                    <p>This collection brings together six classic cars from the United States and Europe, built between 1961 and 1973.</p>
+                    <div class="border-top border-secondary py-4">
+                        <h3 class="h4">Discover each model</h3>
+                        <p class="mb-0">Load the collection to explore each car, its production year and its country of origin.</p>
+                    </div>
+                    <div class="border-top border-secondary py-4">
+                        <h3 class="h4">Choose your favorite</h3>
+                        <p class="mb-0">Open the voting form at the top of the page and choose the classic you like most.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="autoclasica" class="section border border-secondary p-4 mb-5">
+            <div class="row mb-4">
+                <div class="col-lg-8">
+                    <h2>AutoClásica</h2>
+                    <p class="mb-0">AutoClásica is an annual classic vehicle exhibition held at the Hipódromo de San Isidro in Buenos Aires, Argentina.</p>
+                </div>
+            </div>
+            <div class="row border-top border-secondary py-4">
+                <div class="col-lg-4"><h3 class="h4">The exhibition</h3></div>
+                <div class="col-lg-8 d-flex flex-column">
+                    <p class="mb-0">Historic cars and motorcycles, themed exhibitions and a concours of elegance bring classic motoring to life.</p>
+                </div>
+            </div>
+            <div class="row border-top border-secondary py-4">
+                <div class="col-lg-4"><h3 class="h4">The place</h3></div>
+                <div class="col-lg-8 d-flex flex-column">
+                    <p class="mb-0">Hipódromo de San Isidro, Buenos Aires, Argentina.</p>
+                </div>
+            </div>
+            <div class="row border-top border-secondary py-4">
+                <div class="col-lg-4"><h3 class="h4">The organizer</h3></div>
+                <div class="col-lg-8 d-flex flex-column">
+                    <p class="mb-0">Club de Automóviles Clásicos de la República Argentina.</p>
+                </div>
+            </div>
+            <a class="btn btn-danger" href="https://www.autoclasica.com/" target="_blank">Learn more</a>
+        </section>
+
+    </main>
+
+    <footer class="bg-black border-top border-secondary py-4 text-center">
+        <p class="mb-0">Cars Archive</p>
+    </footer>
+
+    <div class="modal fade" id="vote-modal" tabindex="-1" aria-labelledby="vote-title">
+        <div class="modal-dialog">
+            <div class="modal-content text-dark">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="vote-title">Vote for your favorite car</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="vote-form" action="https://api.web3forms.com/submit" method="post" class="needs-validation" novalidate>
+                        <input type="hidden" id="vote-access-key" name="access_key" value="c24a42af-e9f9-408d-af89-a676cd68ccc1">
+
+                        <div class="mb-3">
+                            <label for="vote-name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="vote-name" name="name" required>
+                            <div class="invalid-feedback">Enter your name.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="vote-email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="vote-email" name="email" required>
+                            <div class="invalid-feedback">Enter a valid email address.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="favorite-car" class="form-label">Favorite car</label>
+                            <select class="form-select" id="favorite-car" name="favorite_car" required>
+                                <option value="" selected disabled>Select a car</option>
+                                <option value="Ford Mustang">Ford Mustang</option>
+                                <option value="Porsche 911">Porsche 911</option>
+                                <option value="Jaguar E-Type">Jaguar E-Type</option>
+                                <option value="Volkswagen Beetle">Volkswagen Beetle</option>
+                                <option value="Chevrolet Corvette">Chevrolet Corvette</option>
+                                <option value="Ferrari 250 GTO">Ferrari 250 GTO</option>
+                            </select>
+                            <div class="invalid-feedback">Select your favorite car.</div>
+                        </div>
+
+                        <button type="submit" class="btn btn-danger">Submit vote</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/code.js"></script>
+</body>
+</html>
